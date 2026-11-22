@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Putar Waktu - Museum 2100</title>
+
+    <link rel="stylesheet" href="putar-waktu.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <script src="putar-waktu.js" defer></script>
+</head>
+
+<body>
+
+    <main class="museum">
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                MUSEUM 2100
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="gallery.html" class="active">Gallery</a>
+            </div>
+
+        </nav>
+
+
+        <!-- CONTENT -->
+        <section class="time-section">
+
+            <!-- BACK -->
+            <a href="gallery.html" class="back-button">
+                ← Kembali ke Gallery
+            </a>
+
+
+            <!-- TITLE -->
+            <header class="time-header">
+
+                <div class="hourglass">⌛</div>
+
+                <h1>Putar Waktu</h1>
+
+                <p>
+                    Lihat perubahan kondisi laut dari tahun 2100
+                    ke kondisi saat ini.
+                </p>
+
+            </header>
+
+
+            <!-- COMPARISON SLIDER -->
+            <div class="comparison-container" id="comparison">
+
+                <!-- GAMBAR TAHUN 2100 -->
+                <div class="comparison-image">
+                    <img src="karang.jpg"
+                         alt="Terumbu karang rusak tahun 2100">
+                </div>
+
+
+                <!-- GAMBAR HARI INI -->
+                <div class="comparison-overlay" id="overlay">
+
+                    <img src="laut mati.jpg"
+                         alt="Terumbu karang sehat hari ini">
+
+                </div>
+
+
+                <!-- LABEL TAHUN 2100 -->
+                <div class="image-label label-left">
+
+                    <h3>Tahun 2100</h3>
+
+                    <p>Ekosistem rusak</p>
+
+                </div>
+
+
+                <!-- LABEL HARI INI -->
+                <div class="image-label label-right">
+
+                    <h3>Hari Ini</h3>
+
+                    <p>Masih bisa diselamatkan</p>
+
+                </div>
+
+
+                <!-- GARIS PEMBANDING -->
+                <div class="comparison-divider" id="divider">
+
+                    <div class="slider-handle">
+                        ‹ ›
+                    </div>
+
+                </div>
+
+
+                <!-- INPUT SLIDER -->
+                <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    id="comparisonRange"
+                    aria-label="Geser untuk membandingkan kondisi terumbu karang">
+
+            </div>
+
+            </div>
+
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                MUSEUM 2100 — Protect What Still Remains.
+            </footer>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

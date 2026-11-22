@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aksi Hutan - Museum 2100</title>
+
+    <link rel="stylesheet" href="aksi-hutan.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script src="aksi-hutan.js" defer></script>
+</head>
+
+<body>
+
+<div class="aksi-container">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">MUSEUM 2100</a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html" class="active">Gallery</a>
+        </div>
+    </nav>
+
+    <!-- KEMBALI -->
+    <a href="hutan .html" class="back-link">
+        ← Kembali ke Gallery Hutan
+    </a>
+
+    <!-- HEADER -->
+    <header class="page-header">
+
+        <div class="leaf-icon">🌱</div>
+
+        <h1>Aksi Kita</h1>
+
+        <span class="tagline">FROM PROMISE TO ACTION</span>
+
+        <p>
+            Hutan bukan hanya kumpulan pepohonan,
+            tetapi rumah bagi jutaan kehidupan.
+            <br>
+            Mari lakukan sesuatu untuk menjaganya.
+        </p>
+
+    </header>
+
+
+    <!-- INDIKATOR TAHAP -->
+    <div class="step-indicator">
+
+        <div class="indicator active" id="indicator1">
+            <span>1</span>
+            <p>Pilih Misi</p>
+        </div>
+
+        <div class="indicator-line"></div>
+
+        <div class="indicator" id="indicator2">
+            <span>2</span>
+            <p>Tantangan</p>
+        </div>
+
+        <div class="indicator-line"></div>
+
+        <div class="indicator" id="indicator3">
+            <span>3</span>
+            <p>Refleksi</p>
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         TAHAP 1: PILIH MISI
+    ================================== -->
+
+    <section id="step1" class="step active">
+
+        <div class="section-heading">
+            <h2>Misi Penjaga Hutan</h2>
+            <p>Pilih satu misi yang ingin kamu lakukan.</p>
+        </div>
+
+
+        <div class="mission-grid">
+
+            <!-- MISI 1 -->
+            <label class="mission-card">
+
+                <input type="radio" name="mission" value="tree">
+
+                <div class="mission-icon">🌳</div>
+
+                <div class="mission-info">
+                    <h3>Tree Guardian</h3>
+                    <p>
+                        Menanam dan merawat pohon
+                        untuk menjaga kelestarian hutan.
+                    </p>
+                </div>
+
+                <span class="mission-check">✓</span>
+
+            </label>
+
+
+            <!-- MISI 2 -->
+            <label class="mission-card">
+
+                <input type="radio" name="mission" value="wildlife">
+
+                <div class="mission-icon">🐒</div>
+
+                <div class="mission-info">
+                    <h3>Wildlife Protector</h3>
+                    <p>
+                        Melindungi satwa liar
+                        dan menjaga habitatnya.
+                    </p>
+                </div>
+
+                <span class="mission-check">✓</span>
+
+            </label>
+
+
+            <!-- MISI 3 -->
+            <label class="mission-card">
+
+                <input type="radio" name="mission" value="forest">
+
+                <div class="mission-icon">🌱</div>
+
+                <div class="mission-info">
+                    <h3>Forest Defender</h3>
+                    <p>
+                        Mengurangi penggunaan produk
+                        yang berasal dari penebangan ilegal.
+                    </p>
+                </div>
+
+                <span class="mission-check">✓</span>
+
+            </label>
+
+
+            <!-- MISI 4 -->
+            <label class="mission-card">
+
+                <input type="radio" name="mission" value="educator">
+
+                <div class="mission-icon">🌍</div>
+
+                <div class="mission-info">
+                    <h3>Earth Educator</h3>
+                    <p>
+                        Mengajak orang lain peduli
+                        terhadap kelestarian hutan.
+                    </p>
+                </div>
+
+                <span class="mission-check">✓</span>
+
+            </label>
+
+        </div>
+
+
+        <div class="step-footer">
+
+            <p id="select-message">
+                Pilih satu misi untuk melanjutkan.
+            </p>
+
+            <button class="primary-btn" onclick="mulaiMisi()">
+                Mulai Tantangan →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         TAHAP 2: TANTANGAN
+    ================================== -->
+
+    <section id="step2" class="step">
+
+        <div class="section-heading">
+            <h2>Tantangan Nyata</h2>
+            <p>
+                Satu tindakan kecil dapat membantu
+                menjaga kehidupan di bumi.
+            </p>
+        </div>
+
+
+        <div class="challenge-card">
+
+            <div class="challenge-image">
+                <img id="mission-image"
+                     src="images/menanam-pohon.jpg"
+                     alt="Tantangan pelestarian hutan">
+            </div>
+
+
+            <div class="challenge-content">
+
+                <span class="mission-label" id="mission-label">
+                    MISI 1
+                </span>
+
+                <h2 id="mission-title">
+                    Tree Guardian
+                </h2>
+
+                <p id="mission-description">
+                    Menanam dan merawat pohon.
+                </p>
+
+
+                <div class="challenge-box">
+
+                    <h3>🎯 TANTANGAN HARI INI</h3>
+
+                    <p id="challenge-text">
+                        Tanam satu bibit pohon atau rawat
+                        tanaman yang sudah kamu miliki.
+                    </p>
+
+                </div>
+
+
+                <div class="challenge-note">
+                    <span>💡</span>
+                    <p>
+                        Lakukan tantangan dalam kehidupan
+                        sehari-hari. Kamu tidak harus melakukan
+                        sesuatu yang besar untuk memulai perubahan.
+                    </p>
+                </div>
+
+
+                <div class="challenge-buttons">
+
+                    <button class="primary-btn"
+                            onclick="sudahMelakukan()">
+                        ✓ Saya Sudah Melakukannya
+                    </button>
+
+                    <button class="secondary-btn"
+                            onclick="belumMelakukan()">
+                        Belum, Nanti Saya Coba
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="back-step-btn" onclick="keTahap(1)">
+            ← Kembali Pilih Misi
+        </button>
+
+    </section>
+
+
+    <!-- =================================
+         TAHAP 3: REFLEKSI
+    ================================== -->
+
+    <section id="step3" class="step">
+
+        <div class="section-heading">
+
+            <h2>Bagikan Pengalamanmu</h2>
+
+            <p>
+                Ceritakan tindakan yang sudah kamu lakukan
+                untuk menjaga kelestarian hutan.
+            </p>
+
+        </div>
+
+
+        <div class="reflection-card">
+
+            <!-- UPLOAD FOTO -->
+            <div class="upload-area">
+
+                <label for="photo-upload" class="upload-label">
+
+                    <span class="upload-icon">📷</span>
+
+                    <h3>Unggah Foto</h3>
+
+                    <p>Dokumentasikan aksimu (Opsional)</p>
+
+                    <span class="upload-plus">+</span>
+
+                </label>
+
+                <input type="file"
+                       id="photo-upload"
+                       accept="image/*"
+                       hidden>
+
+                <img id="photo-preview" alt="Preview foto">
+
+            </div>
+
+
+            <!-- REFLEKSI -->
+            <div class="reflection-form">
+
+                <label for="pengalaman">
+                    Ceritakan Pengalamanmu
+                </label>
+
+                <textarea
+                    id="pengalaman"
+                    maxlength="300"
+                    placeholder="Contoh: Hari ini saya menanam satu bibit pohon di halaman rumah dan mulai belajar merawatnya..."
+                ></textarea>
+
+                <div class="character-count">
+                    <span id="char-count">0</span>/300
+                </div>
+
+                <div class="reflection-reminder">
+                    🌱 Setiap pohon yang dijaga adalah
+                    bagian dari masa depan bumi.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="reflection-buttons">
+
+            <button class="secondary-btn"
+                    onclick="keTahap(2)">
+                ← Kembali
+            </button>
+
+            <button class="primary-btn"
+                    onclick="kirimRefleksi()">
+                ✓ Kirim Refleksi
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         HASIL / PENGHARGAAN
+    ================================== -->
+
+    <section id="success" class="step">
+
+        <div class="success-card">
+
+            <div class="success-icon">🏆</div>
+
+            <span class="success-label">
+                MISSION COMPLETED
+            </span>
+
+            <h1>Selamat!</h1>
+
+            <h2>FOREST GUARDIAN</h2>
+
+            <p id="success-mission">
+                Kamu telah menyelesaikan tantanganmu.
+            </p>
+
+            <div class="badge-stars">
+                ⭐ ⭐ ⭐
+            </div>
+
+            <p class="success-message">
+                Terima kasih telah mengambil langkah
+                untuk menjaga kelestarian hutan.
+                Masa depan bumi dimulai dari tindakanmu hari ini.
+            </p>
+
+            <button class="primary-btn"
+                    onclick="ulangMisi()">
+                Pilih Misi Lain →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        MUSEUM 2100 — PROTECT WHAT STILL REMAINS.
+    </footer>
+
+</div>
+
+</body>
+</html>

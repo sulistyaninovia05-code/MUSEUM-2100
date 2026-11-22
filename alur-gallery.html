@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Museum 2100</title>
+
+  <link rel="stylesheet" href="alur-gallery.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+
+  <main class="museum">
+
+    <nav class="navbar">
+      <a href="index.html" class="logo">MUSEUM 2100</a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html" class="active">Gallery</a>
+      </div>
+    </nav>
+
+    <header class="gallery-header">
+      <h1>Ruang Galeri</h1>
+      <p>Jelajahi, bandingkan, dan temukan aksi nyata<br>
+      untuk menyelamatkan alam.</p>
+    </header>
+
+    
+<section class="gallery-cards">
+
+    <!-- CARD 1: INFORMASI PENTING -->
+    <a href="informasi.html" class="gallery-card blue">
+
+        <div class="card-icon">ⓘ</div>
+
+        <h2>Informasi<br>Penting</h2>
+
+        <img src="karang.jpg" alt="Terumbu Karang">
+
+    </a>
+
+
+    <!-- CARD 2: PUTAR WAKTU -->
+    <a href="putar-waktu.html" class="gallery-card cyan">
+
+        <div class="card-icon">⌛</div>
+
+        <h2>Putar<br>Waktu</h2>
+
+        <img src="laut.jpg" alt="Perubahan kondisi laut">
+        
+
+    </a>
+
+
+    <!-- CARD 3: AKSI KITA -->
+    <a href="aksi.html" class="gallery-card green">
+
+        <div class="card-icon">🌱</div>
+
+        <h2>Aksi<br>Kita</h2>
+
+        <img src="karang.jpg" alt="Aksi pelestarian lingkungan">
+
+    </a>
+
+</section>
+
+    </section>
+
+    <div class="floor-glow"></div>
+
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="close" onclick="tutupPanel()">×</button>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+</body>
+</html>

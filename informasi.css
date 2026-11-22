@@ -1,0 +1,474 @@
+
+/* =====================================
+   GLOBAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    color: white;
+    background: #020d19;
+    min-height: 100vh;
+}
+
+/* =====================================
+   BACKGROUND MUSEUM
+===================================== */
+
+.museum-container {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(0, 8, 20, .72),
+            rgba(0, 15, 30, .82)
+        ),
+        url("background.jpg") center/cover fixed no-repeat;
+
+    border: 1px solid #16c9ed;
+    border-radius: 16px;
+
+    box-shadow:
+        inset 0 0 35px rgba(0, 190, 255, .15),
+        0 0 20px rgba(0, 190, 255, .2);
+}
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 28px 5%;
+    position: relative;
+    z-index: 5;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #39e6ff;
+}
+
+.nav-links .active {
+    border-bottom: 2px solid #39e6ff;
+    padding-bottom: 7px;
+}
+
+/* =====================================
+   MAIN INFORMATION
+===================================== */
+
+.information-section {
+    width: min(950px, 90%);
+    margin: 20px auto 40px;
+}
+
+/* BACK BUTTON */
+
+.back-button {
+    display: inline-block;
+    color: #b9eaff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+
+.back-button:hover {
+    color: #42eaff;
+    transform: translateX(-5px);
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.information-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title-icon {
+    font-family: Arial, sans-serif;
+    font-size: 35px;
+    color: #b8f1ff;
+    text-shadow: 0 0 15px #00cfff;
+    margin-bottom: 5px;
+}
+
+.information-header h1 {
+    font-size: clamp(25px, 3vw, 36px);
+    margin-bottom: 10px;
+}
+
+.information-header p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d2e4ee;
+}
+
+/* =====================================
+   TABS
+===================================== */
+
+.information-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    margin: 0 auto 25px;
+    padding: 5px;
+
+    border: 1px solid rgba(66, 211, 255, .35);
+    border-radius: 30px;
+
+    background: rgba(0, 20, 40, .65);
+    backdrop-filter: blur(12px);
+}
+
+.tab-button {
+    flex: 1;
+    padding: 12px 10px;
+
+    border: none;
+    border-radius: 25px;
+
+    color: #c4d8e4;
+    background: transparent;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+.tab-button:hover {
+    color: white;
+    background: rgba(0, 180, 255, .15);
+}
+
+.tab-button.active {
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 173, 225, .4),
+        rgba(0, 110, 190, .25)
+    );
+
+    border: 1px solid #23d7ff;
+
+    box-shadow:
+        0 0 12px rgba(0, 200, 255, .25);
+}
+
+/* =====================================
+   CONTENT PANEL
+===================================== */
+
+.tab-content {
+    display: none;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    align-items: center;
+
+    min-height: 330px;
+    padding: 22px;
+
+    border: 1px solid rgba(0, 205, 255, .5);
+    border-radius: 18px;
+
+    background: rgba(2, 25, 43, .78);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 25px rgba(0, 170, 255, .12),
+        inset 0 0 25px rgba(0, 180, 255, .08);
+}
+
+.tab-content.active {
+    display: grid;
+    animation: contentAppear .45s ease;
+}
+
+@keyframes contentAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================
+   IMAGE
+===================================== */
+
+.content-image {
+    width: 100%;
+    height: 270px;
+
+    overflow: hidden;
+    border-radius: 13px;
+
+    border: 1px solid rgba(60, 210, 255, .5);
+
+    box-shadow:
+        0 0 20px rgba(0, 170, 255, .2);
+}
+
+.content-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    transition: transform .6s;
+}
+
+.content-image:hover img {
+    transform: scale(1.08);
+}
+
+/* =====================================
+   DESCRIPTION
+===================================== */
+
+.content-description {
+    padding: 10px;
+}
+
+.category {
+    color: #4ce5ff;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.content-description h2 {
+    font-size: 23px;
+    line-height: 1.35;
+    margin: 12px 0 15px;
+    color: #f2fbff;
+}
+
+.content-description > p {
+    font-family: Arial, sans-serif;
+    color: #c9dce8;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+/* =====================================
+   FACT BOX
+===================================== */
+
+.fact-box {
+    margin-top: 15px;
+    padding: 14px;
+
+    border-left: 3px solid #30dfff;
+
+    background: rgba(0, 178, 255, .09);
+    border-radius: 5px;
+}
+
+.fact-box span {
+    color: #4de5ff;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.fact-box p {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-top: 7px;
+    color: #dcebf3;
+}
+
+/* =====================================
+   ROLE & THREAT LIST
+===================================== */
+
+.role-list,
+.threat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.role-item,
+.threat-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.role-item > span,
+.threat-item > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 30px;
+    height: 30px;
+
+    border: 1px solid #35dcff;
+    border-radius: 50%;
+
+    color: #6deaff;
+    font-size: 11px;
+
+    box-shadow: 0 0 10px rgba(0, 200, 255, .2);
+}
+
+.role-item h3,
+.threat-item h3 {
+    font-size: 13px;
+    color: #8feaff;
+    margin-bottom: 4px;
+}
+
+.role-item p,
+.threat-item p {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.6;
+    color: #cbdce5;
+}
+
+/* =====================================
+   INDICATORS
+===================================== */
+
+.tab-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    background: #426477;
+    transition: .3s;
+}
+
+.dot.active {
+    background: #48e6ff;
+    box-shadow: 0 0 12px #00cfff;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.information-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+
+    border-top: 1px solid rgba(0, 200, 255, .2);
+}
+
+.information-footer p {
+    font-size: 11px;
+    color: #88a8b8;
+    letter-spacing: 2px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width: 700px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .information-section {
+        width: 94%;
+        margin-top: 10px;
+    }
+
+    .tab-button {
+        font-size: 10px;
+        padding: 10px 5px;
+    }
+
+    .tab-content.active {
+        grid-template-columns: 1fr;
+    }
+
+    .content-image {
+        height: 210px;
+    }
+
+    .content-description h2 {
+        font-size: 20px;
+    }
+
+    .information-container {
+        padding: 15px;
+    }
+}

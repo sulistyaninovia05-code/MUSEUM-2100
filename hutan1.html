@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hutan yang Hilang - Museum 2100</title>
+
+    <link rel="stylesheet" href="hutan.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script src="hutan.js" defer></script>
+</head>
+
+<body>
+
+<div class="info-container">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2>MUSEUM 2100</h2>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html" class="active">Gallery</a>
+        </div>
+    </nav>
+
+
+    <!-- KEMBALI -->
+    <a href="gallery.html" class="back-link">
+        ← Kembali 
+    </a>
+
+
+    <!-- HEADER -->
+    <header class="info-header">
+
+        <span class="category-label">
+            FOREST ECOSYSTEM
+        </span>
+
+        <h1>HUTAN YANG HILANG</h1>
+
+        <p>
+            Ketika hutan menghilang, bukan hanya pepohonan
+            yang hilang, tetapi juga kehidupan yang bergantung padanya.
+        </p>
+
+    </header>
+
+
+    <!-- NAVIGASI INFORMASI -->
+    <div class="tab-menu">
+
+        <button class="tab-btn active"
+                onclick="openTab(event, 'tentang')">
+            Mengenal Ekosistem
+        </button>
+
+        <button class="tab-btn"
+                onclick="openTab(event, 'peran')">
+            Fungsi Ekosistem
+        </button>
+
+        <button class="tab-btn"
+                onclick="openTab(event, 'ancaman')">
+            Ancaman Lingkungan
+        </button>
+
+    </div>
+
+
+    <!-- =================================
+         BAGIAN 1 : MENGENAL EKOSISTEM
+    ================================== -->
+
+    <section id="tentang" class="tab-content active">
+
+        <div class="info-content">
+
+            <div class="info-image">
+                <img src="hutan.jpg"
+                     alt="Hutan hujan tropis yang lebat">
+            </div>
+
+            <div class="info-text">
+
+                <span class="section-number">
+                    01 / MENGENAL EKOSISTEM
+                </span>
+
+                <h2>Hutan, Rumah bagi Kehidupan</h2>
+
+                <p>
+                    Hutan merupakan ekosistem alami yang terdiri
+                    dari berbagai jenis tumbuhan, hewan, dan
+                    organisme yang saling berinteraksi.
+                </p>
+
+                <p>
+                    Hutan menjadi tempat tinggal bagi beragam
+                    spesies serta menyediakan sumber daya
+                    penting bagi kehidupan manusia.
+                </p>
+
+                <p>
+                    Namun, seiring berjalannya waktu, luas hutan
+                    semakin berkurang akibat aktivitas manusia
+                    dan berbagai perubahan lingkungan.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="fact-box">
+
+            <h3>TAHUKAH KAMU?</h3>
+
+            <p>
+                Hutan tropis memiliki keanekaragaman hayati
+                yang sangat tinggi dan menjadi habitat bagi
+                banyak spesies tumbuhan maupun hewan.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         BAGIAN 2 : FUNGSI EKOSISTEM
+    ================================== -->
+
+    <section id="peran" class="tab-content">
+
+        <div class="info-content">
+
+            <div class="info-image">
+                <img src="hutan.jpg]"
+                     alt="Keindahan ekosistem hutan">
+            </div>
+
+            <div class="info-text">
+
+                <span class="section-number">
+                    02 / FUNGSI EKOSISTEM
+                </span>
+
+                <h2>Hutan Menjaga Keseimbangan Bumi</h2>
+
+                <p>
+                    Hutan memiliki peran penting dalam menjaga
+                    keseimbangan lingkungan. Keberadaannya
+                    memberikan manfaat bagi manusia dan
+                    berbagai makhluk hidup.
+                </p>
+
+                <div class="role-list">
+
+                    <div class="role-item">
+                        <span>🌳</span>
+                        <div>
+                            <h3>Penghasil Oksigen</h3>
+                            <p>
+                                Tumbuhan menyerap karbon dioksida
+                                dan menghasilkan oksigen melalui
+                                proses fotosintesis.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="role-item">
+                        <span>🐒</span>
+                        <div>
+                            <h3>Habitat Satwa</h3>
+                            <p>
+                                Menjadi tempat tinggal dan sumber
+                                makanan bagi berbagai jenis hewan.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="role-item">
+                        <span>💧</span>
+                        <div>
+                            <h3>Pengatur Siklus Air</h3>
+                            <p>
+                                Membantu menjaga siklus air,
+                                menyerap air hujan, dan mengurangi
+                                risiko erosi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="role-item">
+                        <span>🌍</span>
+                        <div>
+                            <h3>Pengendali Iklim</h3>
+                            <p>
+                                Menyimpan karbon dan membantu
+                                mengatur kondisi iklim bumi.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         BAGIAN 3 : ANCAMAN LINGKUNGAN
+    ================================== -->
+
+    <section id="ancaman" class="tab-content">
+
+        <div class="info-content">
+
+            <div class="info-image">
+                <img src="hutan.jpg"
+                     alt="Kondisi hutan yang mengalami deforestasi">
+            </div>
+
+            <div class="info-text">
+
+                <span class="section-number">
+                    03 / ANCAMAN LINGKUNGAN
+                </span>
+
+                <h2>Ketika Hutan Mulai Menghilang</h2>
+
+                <p>
+                    Deforestasi merupakan perubahan kawasan
+                    hutan menjadi penggunaan lahan lain sehingga
+                    tutupan hutan berkurang secara permanen.
+                </p>
+
+                <p>
+                    Aktivitas pembukaan lahan, penebangan pohon,
+                    kebakaran hutan, dan pembangunan dapat
+                    menyebabkan kerusakan ekosistem.
+                </p>
+
+                <div class="threat-list">
+
+                    <div class="threat-item">
+                        <span>🪓</span>
+                        <div>
+                            <h3>Penebangan Hutan</h3>
+                            <p>
+                                Mengurangi jumlah pepohonan
+                                dan merusak habitat satwa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="threat-item">
+                        <span>🔥</span>
+                        <div>
+                            <h3>Kebakaran Hutan</h3>
+                            <p>
+                                Menghancurkan vegetasi dan
+                                mengancam kehidupan satwa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="threat-item">
+                        <span>🏗️</span>
+                        <div>
+                            <h3>Alih Fungsi Lahan</h3>
+                            <p>
+                                Mengubah kawasan hutan menjadi
+                                area pertanian, perkebunan,
+                                atau pembangunan.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="fact-box warning-box">
+
+            <h3>APA YANG TERJADI JIKA HUTAN HILANG?</h3>
+
+            <p>
+                Hilangnya hutan dapat menyebabkan kerusakan
+                habitat, berkurangnya keanekaragaman hayati,
+                peningkatan emisi karbon, serta terganggunya
+                keseimbangan lingkungan.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="info-footer">
+        MUSEUM 2100 — PROTECT WHAT STILL REMAINS.
+    </footer>
+
+</div>
+
+</body>
+</html>
+
+
+</body>
+</html>

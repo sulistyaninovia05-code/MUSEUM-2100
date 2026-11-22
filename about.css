@@ -1,0 +1,459 @@
+/* bagian about */ 
+
+
+/* =================================
+   GLOBAL BACKGROUND
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    color: white;
+
+    /* Background bumi untuk seluruh halaman */
+    background:
+        linear-gradient(
+            rgba(0, 10, 35, 0.48),
+            rgba(0, 10, 35, 0.58)
+        ),
+        url("background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+}
+
+
+/* =================================
+   NAVBAR
+================================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 35px;
+
+    background: rgba(0, 10, 30, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    position: relative;
+    z-index: 10;
+}
+
+.navbar h3 {
+    font-size: 16px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #65d9ff;
+}
+
+
+/* =================================
+   HERO
+================================= */
+
+.about-hero {
+    min-height: 330px;
+
+    padding: 45px 35px 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    background: rgba(0, 15, 45, 0.20);
+
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+.hero-text {
+    margin-top: 10px;
+}
+
+.hero-text h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 32px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.hero-text p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.hero-description {
+    margin-top: 55px;
+    max-width: 900px;
+}
+
+
+/* =================================
+   CONTENT SECTION
+================================= */
+
+.content-section {
+    position: relative;
+
+    margin: 12px;
+    padding: 25px 20px 35px;
+
+    border-radius: 12px;
+
+    /* Transparansi section */
+    background: rgba(255, 255, 255, 0.13);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255,255,255,0.22);
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+}
+
+.content-section h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.content-section > h3 {
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+/* =================================
+   CARD GRID
+================================= */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.info-card {
+    min-height: 110px;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    /* Card transparan */
+    background: rgba(255, 255, 255, 0.18);
+
+    border: 1px solid rgba(255,255,255,0.22);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    background: rgba(255, 255, 255, 0.28);
+    transform: translateY(-5px);
+}
+
+.info-card h3 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* =================================
+   PURPOSE SECTION
+================================= */
+
+.purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.purpose-card {
+    padding: 18px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.18);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    backdrop-filter: blur(8px);
+}
+
+.purpose-card h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.purpose-card p {
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* =================================
+   FUTURE SECTION
+================================= */
+
+.future-content {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.future-content h3 {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.future-content p {
+    margin-top: 18px;
+    font-size: 12px;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    padding: 20px;
+    text-align: right;
+}
+
+footer a {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 11px;
+
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+}
+
+
+/* =================================
+   RESPONSIVE MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 12px;
+    }
+
+    .navbar h3 {
+        font-size: 10px;
+    }
+
+    .navbar ul {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 9px;
+    }
+
+    .about-hero {
+        min-height: 220px;
+        padding: 25px 12px;
+    }
+
+    .hero-text h1 {
+        font-size: 19px;
+    }
+
+    .hero-text p {
+        font-size: 10px;
+    }
+
+    .hero-description h3 {
+        font-size: 12px;
+    }
+
+    .hero-description p {
+        font-size: 9px;
+    }
+
+    .content-section {
+        margin: 8px;
+        padding: 18px 10px 28px;
+    }
+
+    .content-section h2 {
+        font-size: 16px;
+    }
+
+    .content-section > h3 {
+        font-size: 12px;
+    }
+
+    .card-grid {
+        gap: 10px;
+    }
+
+    .info-card {
+        min-height: 95px;
+        padding: 12px 10px;
+    }
+
+    .info-card h3 {
+        font-size: 10px;
+    }
+
+    .info-card p {
+        font-size: 9px;
+    }
+
+    .purpose-grid {
+        gap: 10px;
+    }
+
+    .purpose-card {
+        padding: 12px 10px;
+    }
+
+    .purpose-card h3 {
+        font-size: 10px;
+    }
+
+    .purpose-card p {
+        font-size: 9px;
+    }
+
+    .section-label {
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+
+    .future-content h3 {
+        font-size: 12px;
+    }
+
+    .future-content p {
+        font-size: 10px;
+    }
+}
+
+/* STORY GRID */
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+/* STORY CARD */
+
+.story-card {
+    padding: 25px;
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    transition: 0.4s ease;
+}
+
+/* ICON */
+
+.story-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(180, 220, 255, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    margin-bottom: 15px;
+}
+
+.story-icon i {
+    font-size: 23px;
+    color: #d8efff;
+
+    text-shadow: 0 0 12px rgba(120, 200, 255, 0.8);
+}
+
+/* TITLE */
+
+.story-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* DESCRIPTION */
+
+.story-card p {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* HOVER */
+
+.story-card:hover {
+    transform: translateY(-6px);
+
+    background: rgba(255, 255, 255, 0.40);
+
+    border-color: rgba(180, 220, 255, 0.7);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.story-card:hover .story-icon {
+    background: rgba(150, 210, 255, 0.35);
+}

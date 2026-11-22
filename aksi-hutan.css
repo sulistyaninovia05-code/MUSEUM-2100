@@ -1,0 +1,819 @@
+
+/* =====================================
+   GLOBAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: #001923;
+}
+
+.aksi-container {
+    min-height: 100vh;
+    width: 100%;
+
+    background:
+        linear-gradient(
+            rgba(0, 18, 27, 0.85),
+            rgba(0, 25, 34, 0.93)
+        ),
+        url("images/hutan-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    border: 1px solid rgba(92, 230, 240, 0.5);
+    border-radius: 15px;
+    padding-bottom: 25px;
+}
+
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 45px;
+}
+
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #48f5ef;
+}
+
+
+/* =====================================
+   BACK LINK
+===================================== */
+
+.back-link {
+    display: inline-block;
+    margin: 12px 35px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.back-link:hover {
+    color: #75ffb0;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.page-header {
+    text-align: center;
+    margin: 20px auto 25px;
+    padding: 0 20px;
+}
+
+.leaf-icon {
+    font-size: 40px;
+}
+
+.page-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    color: #a6f5b4;
+    text-shadow: 0 0 15px rgba(102, 255, 170, .35);
+}
+
+.tagline {
+    display: inline-block;
+    padding: 6px 25px;
+    margin: 10px 0;
+
+    border: 1px solid #27dfe0;
+    border-radius: 30px;
+
+    color: #b9ffff;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.page-header p {
+    color: #d7eeee;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   STEP INDICATOR
+===================================== */
+
+.step-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 35px auto;
+}
+
+.indicator {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #8caeb3;
+    transition: .3s;
+}
+
+.indicator span {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #668d91;
+    border-radius: 50%;
+    font-size: 13px;
+}
+
+.indicator p {
+    font-size: 12px;
+}
+
+.indicator.active,
+.indicator.done {
+    color: #9effb1;
+}
+
+.indicator.active span,
+.indicator.done span {
+    background: #8fe6a0;
+    border-color: #8fe6a0;
+    color: #003e30;
+    box-shadow: 0 0 12px #70ffa4;
+}
+
+.indicator-line {
+    width: 55px;
+    height: 1px;
+    background: rgba(98, 219, 221, .5);
+}
+
+
+/* =====================================
+   STEP CONTENT
+===================================== */
+
+.step {
+    display: none;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.step.active {
+    display: block;
+    animation: fadeIn .5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================
+   SECTION HEADING
+===================================== */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    color: #9df5ae;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    font-size: 13px;
+    color: #c6e2e4;
+}
+
+
+/* =====================================
+   MISSION GRID
+===================================== */
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.mission-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 22px;
+
+    background: rgba(0, 43, 54, .65);
+    border: 1px solid rgba(62, 210, 220, .35);
+    border-radius: 18px;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+.mission-card:hover {
+    border-color: #5cfaf1;
+    background: rgba(0, 88, 91, .45);
+    transform: translateY(-4px);
+}
+
+.mission-card:has(input:checked) {
+    border: 1px solid #75ffc0;
+    background: rgba(12, 104, 75, .45);
+    box-shadow: 0 0 18px rgba(52, 255, 174, .25);
+}
+
+.mission-card input {
+    display: none;
+}
+
+.mission-icon {
+    font-size: 38px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.mission-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #e8ffff;
+}
+
+.mission-info p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #c5dfe0;
+}
+
+.mission-check {
+    margin-left: auto;
+    min-width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #a4e5d0;
+    border-radius: 6px;
+    color: transparent;
+}
+
+.mission-card:has(input:checked) .mission-check {
+    background: #8ce8a2;
+    color: #003e30;
+}
+
+
+/* =====================================
+   STEP FOOTER
+===================================== */
+
+.step-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.step-footer p {
+    color: #a9cdd0;
+    font-size: 12px;
+}
+
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.primary-btn {
+    padding: 13px 28px;
+
+    border: 1px solid #5affee;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        120deg,
+        rgba(0, 150, 142, .8),
+        rgba(0, 82, 91, .9)
+    );
+
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+
+    box-shadow: 0 0 15px rgba(0, 245, 240, .3);
+    transition: .3s;
+}
+
+.primary-btn:hover {
+    background: #087f7b;
+    box-shadow: 0 0 25px #00e6dc;
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    padding: 12px 20px;
+
+    background: rgba(0, 20, 30, .6);
+    border: 1px solid rgba(98, 220, 228, .7);
+    border-radius: 30px;
+
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.secondary-btn:hover {
+    background: rgba(0, 120, 130, .4);
+}
+
+
+/* =====================================
+   CHALLENGE CARD
+===================================== */
+
+.challenge-card {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 30px;
+
+    padding: 25px;
+
+    background: rgba(0, 37, 48, .75);
+    border: 1px solid rgba(68, 223, 229, .4);
+    border-radius: 20px;
+}
+
+.challenge-image {
+    min-height: 320px;
+}
+
+.challenge-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+
+    object-fit: cover;
+    border-radius: 15px;
+    border: 1px solid rgba(105, 240, 220, .5);
+}
+
+.challenge-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mission-label {
+    display: inline-block;
+    width: fit-content;
+
+    padding: 5px 15px;
+
+    background: rgba(0, 185, 190, .2);
+    border: 1px solid #35d9db;
+    border-radius: 30px;
+
+    color: #9efffa;
+    font-size: 11px;
+}
+
+.challenge-content h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 27px;
+    margin: 12px 0;
+    color: #dfffff;
+}
+
+.challenge-content > p {
+    color: #c6e1e3;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.challenge-box {
+    padding: 20px;
+
+    background: rgba(0, 72, 75, .4);
+    border: 1px solid #2ed8c9;
+    border-radius: 15px;
+}
+
+.challenge-box h3 {
+    color: #a8ffae;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.challenge-box p {
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.challenge-note {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+
+    margin: 18px 0;
+    color: #c3e2e2;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.challenge-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+/* =====================================
+   BACK STEP
+===================================== */
+
+.back-step-btn {
+    display: block;
+    margin: 22px auto 0;
+
+    border: none;
+    background: transparent;
+
+    color: #a6e8eb;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+/* =====================================
+   REFLECTION
+===================================== */
+
+.reflection-card {
+    display: grid;
+    grid-template-columns: .7fr 1.3fr;
+    gap: 25px;
+
+    padding: 25px;
+
+    background: rgba(0, 38, 48, .75);
+    border: 1px solid rgba(73, 225, 225, .4);
+    border-radius: 20px;
+}
+
+.upload-label {
+    min-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    border: 2px dashed rgba(121, 231, 226, .7);
+    border-radius: 15px;
+
+    cursor: pointer;
+    text-align: center;
+    padding: 15px;
+    transition: .3s;
+}
+
+.upload-label:hover {
+    background: rgba(0, 130, 140, .15);
+}
+
+.upload-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.upload-label h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.upload-label p {
+    font-size: 11px;
+    color: #b9d7d9;
+}
+
+.upload-plus {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #a0f0dc;
+    color: #003c37;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+#photo-preview {
+    display: none;
+    width: 100%;
+    max-height: 250px;
+
+    object-fit: contain;
+    margin-top: 12px;
+    border-radius: 12px;
+}
+
+.reflection-form {
+    position: relative;
+}
+
+.reflection-form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.reflection-form textarea {
+    width: 100%;
+    height: 200px;
+    resize: vertical;
+    padding: 18px;
+
+    background: rgba(0, 22, 31, .75);
+    border: 1px solid rgba(93, 227, 225, .6);
+    border-radius: 15px;
+
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+.reflection-form textarea:focus {
+    border-color: #6effef;
+    box-shadow: 0 0 12px rgba(0, 239, 220, .2);
+}
+
+.reflection-form textarea::placeholder {
+    color: #8daeb0;
+}
+
+.character-count {
+    text-align: right;
+    margin-top: 7px;
+    color: #9cbec0;
+    font-size: 11px;
+}
+
+.reflection-reminder {
+    margin-top: 18px;
+    color: #a9f5c2;
+    font-size: 12px;
+}
+
+.reflection-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+
+/* =====================================
+   SUCCESS
+===================================== */
+
+.success-card {
+    text-align: center;
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 45px 25px;
+
+    background: rgba(0, 52, 55, .7);
+    border: 1px solid #62efc5;
+    border-radius: 25px;
+
+    box-shadow: 0 0 25px rgba(0, 255, 190, .15);
+}
+
+.success-icon {
+    font-size: 75px;
+    margin-bottom: 10px;
+}
+
+.success-label {
+    color: #94ffbf;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.success-card h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 38px;
+    color: #a5ffbd;
+    margin: 15px 0;
+}
+
+.success-card h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    color: #fff2a8;
+}
+
+.success-card p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: #d5ebeb;
+    margin-top: 15px;
+}
+
+.badge-stars {
+    font-size: 30px;
+    margin: 18px 0;
+}
+
+.success-message {
+    margin: 20px auto 25px !important;
+    max-width: 450px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    text-align: center;
+    margin-top: 55px;
+    color: #779fa4;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .page-header h1 {
+        font-size: 30px;
+    }
+
+    .page-header p {
+        font-size: 11px;
+    }
+
+    .step {
+        width: 92%;
+    }
+
+    .step-indicator {
+        gap: 7px;
+    }
+
+    .indicator {
+        gap: 5px;
+    }
+
+    .indicator span {
+        width: 27px;
+        height: 27px;
+    }
+
+    .indicator p {
+        font-size: 9px;
+    }
+
+    .indicator-line {
+        width: 20px;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-card {
+        padding: 15px;
+    }
+
+    .step-footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .challenge-card,
+    .reflection-card {
+        grid-template-columns: 1fr;
+    }
+
+    .challenge-image img {
+        min-height: 230px;
+        max-height: 300px;
+    }
+
+    .challenge-buttons {
+        flex-direction: column;
+    }
+
+    .challenge-buttons button {
+        width: 100%;
+    }
+
+    .reflection-buttons {
+        flex-direction: column;
+    }
+
+    .reflection-buttons button {
+        width: 100%;
+    }
+
+    footer {
+        padding: 0 15px;
+        line-height: 1.8;
+    }
+}

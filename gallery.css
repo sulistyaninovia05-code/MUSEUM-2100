@@ -1,0 +1,288 @@
+
+/* =================================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+    /* BACKGROUND TETAP */
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* =================================
+   OVERLAY
+================================= */
+
+.background-overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 20, 35, 0.35),
+        rgba(0, 0, 0, 0.60)
+    );
+    z-index: -1;
+}
+
+/* =================================
+   NAVBAR
+================================= */
+
+.navbar {
+    position: relative;
+    width: 100%;
+    height: 85px;
+
+    padding: 15px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 2;
+}
+
+.logo h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+
+.logo p {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    margin-top: 3px;
+    color: #e0e0e0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #b7d9e9;
+}
+
+/* =================================
+   GALLERY CONTENT
+================================= */
+
+.gallery-container {
+    width: 100%;
+    height: calc(100vh - 85px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px 7% 25px;
+}
+
+/* INTRO */
+
+.gallery-intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-intro h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 7px;
+}
+
+.gallery-intro p {
+    font-size: 12px;
+    color: #e4e4e4;
+}
+
+/* =================================
+   GALLERY GRID
+================================= */
+
+.gallery-grid {
+    width: 100%;
+    max-width: 1050px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+    margin: auto 0;
+}
+
+/* =================================
+   TRANSPARENT CARD
+================================= */
+
+.gallery-card {
+    min-height: 155px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.76);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+
+    border-radius: 13px;
+
+    color: #17252b;
+
+    transition: 0.35s ease;
+}
+
+/* CARD HOVER */
+
+.gallery-card:hover {
+    background: rgba(255, 255, 255, 0.88);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* CARD CONTENT */
+
+.card-content {
+    width: 100%;
+}
+
+.card-content h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #303b40;
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
+
+.card-button {
+    display: block;
+    width: fit-content;
+
+    margin-left: auto;
+
+    padding: 6px 13px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    color: #17252b;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.card-button:hover {
+    background: #183b4b;
+    color: white;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: 75px;
+        padding: 10px 4%;
+    }
+
+    .logo h2 {
+        font-size: 14px;
+    }
+
+    .logo p {
+        font-size: 8px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .gallery-container {
+        height: calc(100vh - 75px);
+        padding: 10px 4%;
+    }
+
+    .gallery-intro h1 {
+        font-size: 21px;
+    }
+
+    .gallery-intro p {
+        font-size: 9px;
+    }
+
+    .gallery-grid {
+        gap: 10px;
+    }
+
+    .gallery-card {
+        min-height: 170px;
+        padding: 12px;
+    }
+
+    .card-content h3 {
+        font-size: 10px;
+    }
+
+    .card-content p {
+        font-size: 9px;
+    }
+
+    .card-button {
+        font-size: 8px;
+        padding: 5px 9px;
+    }
+}
